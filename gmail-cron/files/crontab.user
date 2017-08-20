@@ -1,0 +1,8 @@
+#MAILTO=<email to receive errors and output from cron jobs>
+HOME=/home/user
+SHELL=/bin/bash
+PATH=/usr/local/bin:/usr/bin:/bin
+
+# m   h  dom  mon  dow   command
+  *  03    *    *    *   /bin/true
+
