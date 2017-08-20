@@ -12,6 +12,6 @@ COPY files/crontab.user /etc/crontabs/user
 COPY files/supervisord.conf /etc/supervisord.conf
 COPY files/init-cron.sh /usr/local/bin/init-cron
 
-# Chain initialization or mailer and cron before starting services
+# Chain initialization of mailer and cron before starting services
 ENTRYPOINT ["/usr/local/bin/init-mailer", "/usr/local/bin/init-cron", \
             "/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
