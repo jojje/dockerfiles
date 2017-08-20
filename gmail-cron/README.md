@@ -23,11 +23,11 @@ If `CRON_SENDER` is not specified, the sender will be "Linux User
 
 # Compose example
 
-  cron:
-    image: jojje/gmail-cron
-    environment:
-      SMTP_LOGIN: sender@gmail.com
-      SMTP_PASSWORD: secret
-      CRON_MAILTO: receiver@somewhere.com
-      CRON_SENDER: Cron user
+    cron:
+      image: jojje/gmail-cron
+      environment:
+        SMTP_LOGIN: sender@gmail.com
+        SMTP_PASSWORD: secret
+        CRON_MAILTO: receiver@somewhere.com
+        CRON_SENDER: Cron user
 
