@@ -4,7 +4,7 @@ MAINTAINER Jonas Tingeborn <github.com/jojje>
 # Add static utility for changing user description (name)
 RUN apk add --no-cache -t deps gcc make libc-dev curl \
  && DIR=$(mktemp -d) && cd ${DIR} \
- && curl -sL http://pkg-shadow.alioth.debian.org/releases/shadow-4.2.1.tar.xz | xzcat | tar --strip-components=1 -xf - \
+ && curl -sL https://pkg-shadow.alioth.debian.org/releases/shadow-4.2.1.tar.xz | xzcat | tar --strip-components=1 -xf - \
  && ./configure --without-nscd \
  && make -j$(grep -c processor /proc/cpuinfo) LDFLAGS=-all-static \
  && strip src/chfn \
