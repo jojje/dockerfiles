@@ -76,7 +76,7 @@ looks after initialization, or increasing the crond logging.
 
 Example of the latter
 
-    docker-compose run --rm cron crond -f -L /dev/stdout -l 8
+    docker-compose run --rm cron crond -f -L /dev/stdout -l 0
 
 Note: assumes a compose file like in the example is used, to reduce typing.
 
