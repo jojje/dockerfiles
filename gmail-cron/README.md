@@ -51,7 +51,7 @@ itself for the user that is to run the job(s).
 
 E.g. adding a new job to be run every 5 minutes:
 
-    # echo '5 * * * *  /some-dir/my-script' >> /etc/crontabs/user'
+    # echo '5 * * * *  /some-dir/my-script' >> /etc/crontabs/user
 
 Or using the normal edit commands for crontab
 
