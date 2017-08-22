@@ -18,6 +18,7 @@ echo "Cron mailto address: ${CRON_MAILTO}"
 # Optional variable, defaults to account named running cron
 if [ -n "${CRON_SENDER}" ]; then
 	chfn -f "${CRON_SENDER}" user
+	chfn -f "${CRON_SENDER}" root
 	echo "Cron mail sender display name: \"${CRON_SENDER}\""
 fi
 
