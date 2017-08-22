@@ -10,7 +10,9 @@ set -e # exit on error
 
 # Template instantiation
 receiver=$(echo -n "${CRON_MAILTO}" | sed -e 's/[]\/$*.^|[]/\\&/g')
-sed -i'' "s/^#MAILTO.*/MAILTO=${receiver}/g" /etc/crontabs/user
+for tab in /etc/crontabs/*; do
+  sed -i'' "s/^# MAILTO=.*/MAILTO=${receiver}/g" "${tab}"
+done
 echo "Cron mailto address: ${CRON_MAILTO}"
 
 # Optional variable, defaults to account named running cron

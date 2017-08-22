@@ -1,8 +1,12 @@
-#MAILTO=<email to receive errors and output from cron jobs>
+# MAILTO=<email to receive errors and output from cron jobs>
 HOME=/home/user
 SHELL=/bin/bash
 PATH=/usr/local/bin:/usr/bin:/bin
 
-# m   h  dom  mon  dow   command
-  *  03    *    *    *   /bin/true
+# min   hour    day     month   weekday command
+*/15    *       *       *       *       run-parts ~/periodic/15min
+0       *       *       *       *       run-parts ~/periodic/hourly
+0       2       *       *       *       run-parts ~/periodic/daily
+0       3       *       *       6       run-parts ~/periodic/weekly
+0       5       1       *       *       run-parts ~/periodic/monthly
 
